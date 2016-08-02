@@ -8,3 +8,7 @@ template "/home/ubuntu/config.conf" do
   variables( :a => 'Hello', :b => 'World', :c => 'Ololo' )
 end
 
+template "/etc/tomcat7/tomcat-users.xml" do
+  source "tomcat-users.erb"
+  varialbles( :user_name=>'admin', :creds=>'rigiladmin')
+end
