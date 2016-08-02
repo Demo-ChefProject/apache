@@ -1,6 +1,7 @@
 execute "tomcat7 installation" do
  command "sudo apt-get update"
  command "sudo apt-get install tomcat7"
+ command "sudo apt-get install tomcat7-admin"
 end
 
 template "/etc/tomcat7/tomcat-users.xml" do
