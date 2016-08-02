@@ -3,7 +3,7 @@
 cd ~/home/jenkins/workspace/Chef-apache/.chef/
 
 # Creates a role for tomcat
-sudo knife role from file /home/jenkins/workspace/Chef-apache/roles/tomcat.rb
+sudo knife role from file /home/jenkins/workspace/Chef-apache/roles/apache.rb
 
 # Bootstrap a node to its chef server
 sudo knife bootstrap 54.175.232.159 --ssh-user ubuntu --sudo --identity-file /home/jenkins/workspace/Chef-apache/.chef/agiletrailblazers.pem -N Rigil_Nod$
