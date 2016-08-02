@@ -10,5 +10,5 @@ end
 
 template "/etc/tomcat7/tomcat-users.xml" do
   source "tomcat-users.erb"
-  varialbles( :user_name=>'admin', :creds=>'rigiladmin')
+  variables( :user_name => 'admin', :creds => 'rigiladmin')
 end
