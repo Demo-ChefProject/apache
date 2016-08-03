@@ -9,6 +9,12 @@ template "/etc/tomcat7/tomcat-users.xml" do
   variables( :user_name => 'admin', :creds => 'rigiladmin')
 end
 
+template "/etc/tomcat7/server.xml" do
+  source "server.erb"
+  variables( :port => '8081')
+end
+
+
 
 remote_file '/home/ubuntu/rigil-18f-pool2.war' do
   source 'http://54.175.158.124:8081/repository/Rigil/rigil-18f-pool2.war'
