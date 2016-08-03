@@ -13,4 +13,4 @@ sudo knife bootstrap 54.175.232.159 --ssh-user ubuntu --sudo --identity-file /ho
 
 # ssh into the chef node and execute the chef client to run its run list from chef server
 
-ssh -i /home/ubuntu/.ssh/agiletrailblazers.pem ubuntu@54.175.232.159 "sudo chef-client -l debug"
+ssh -o StrictHostKeyChecking=no -i /home/ubuntu/.ssh/agiletrailblazers.pem ubuntu@54.175.232.159 "sudo chef-client -l debug"
