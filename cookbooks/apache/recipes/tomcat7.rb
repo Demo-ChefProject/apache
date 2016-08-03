@@ -13,6 +13,8 @@ end
 remote_file '/home/ubuntu/rigil-18f-pool2.war' do
   source 'http://54.175.158.124:8081/repository/Rigil/rigil-18f-pool2.war'
   mode '0755'
+  owner 'tomcat7'
+  group 'tomcat7'
   action :create
 end
 
