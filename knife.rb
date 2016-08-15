@@ -12,7 +12,7 @@
 #knife[:node_log_path] = '/var/log/chef-server/nodes'
 #cookbook_path            ["#{current_dir}/../cookbooks/"]
 
-########################
+#######################
 # Windows configuration
 log_level                :info
 log_location             STDOUT
