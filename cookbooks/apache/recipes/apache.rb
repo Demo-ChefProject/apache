@@ -9,8 +9,8 @@ end
 
 execute 'remove logs' do
   command 'cd D:\NC4\MC3\HTTPD'
-  command 'RD /S /Q 'D:\NC4\MC3\HTTPD\logs''
-  command 'RD /S /Q 'D:\NC4\MC3\HTTPD\errors''
+  command 'RD /S /Q D:\NC4\MC3\HTTPD\logs'
+  command 'RD /S /Q D:\NC4\MC3\HTTPD\errors'
 end
 
 file 'D:\NC4\MC3\HTTPD\conf\extra\MC3AgileDev.conf' do
