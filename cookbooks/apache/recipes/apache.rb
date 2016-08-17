@@ -25,4 +25,5 @@ end
 execute "Create Windows server" do
   command "cd D:\NC4\HTTPD\bin\"
   command "httpd.exe -k install -n 'Apache 2.2 HTTP'"
+  command "sc \\server config ServiceName obj= Domain\user password= pass"
 end
