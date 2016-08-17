@@ -23,7 +23,7 @@ template 'D:\NC4\MC3\HTTPD\conf\httpd.conf' do
 end
 
 execute 'Create Windows service for Apache' do
-  command 'cd D:\NC4\HTTPD\bin\'
-  command 'httpd.exe -k install -n 'Apache 2.2 HTTP''
+  command 'cd D:\NC4\HTTPD\bin'
+  command 'httpd.exe -k install -n "Apache 2.2 HTTP"'
   command 'sc \\server config ServiceName obj= Domain\user password= pass'
 end
