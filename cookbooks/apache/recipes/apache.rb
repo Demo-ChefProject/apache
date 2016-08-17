@@ -13,12 +13,12 @@ execute 'remove logs' do
   command 'RD /S /Q 'D:\NC4\MC3\HTTPD\errors''
 end
 
-file "D:\NC4\MC3\HTTPD\conf\extra\MC3AgileDev.conf" do
-  source "httpd-vhosts.conf"
+file 'D:\NC4\MC3\HTTPD\conf\extra\MC3AgileDev.conf' do
+  source 'httpd-vhosts.conf'
 end
 
-template "D:\NC4\MC3\HTTPD\conf\httpd.conf" do
-  source "httpd.erb"
+template 'D:\NC4\MC3\HTTPD\conf\httpd.conf' do
+  source 'httpd.erb'
   variables( :server_name => 'MC3AgileDev')
 end
 
