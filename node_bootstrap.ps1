@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# This is a comment
 #cd ~/home/jenkins/workspace/Chef-apache/
 cd C:\Jenkins\workspace\Chef-apache\
 
