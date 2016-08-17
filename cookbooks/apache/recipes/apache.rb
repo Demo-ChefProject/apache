@@ -7,10 +7,10 @@ execute 'unzip apache' do
   command 'unzip apache-httpd-32-2.2.32.zip D:\NC4\MC3\HTTPD'
 end
 
-execute "remove logs" do
-  command "cd D:\NC4\MC3\HTTPD"
-  command "RD /S /Q 'D:\NC4\MC3\HTTPD\logs'"
-  command "RD /S /Q 'D:\NC4\MC3\HTTPD\errors'"
+execute 'remove logs' do
+  command 'cd D:\NC4\MC3\HTTPD'
+  command 'RD /S /Q 'D:\NC4\MC3\HTTPD\logs''
+  command 'RD /S /Q 'D:\NC4\MC3\HTTPD\errors''
 end
 
 file "D:\NC4\MC3\HTTPD\conf\extra\MC3AgileDev.conf" do
@@ -22,8 +22,8 @@ template "D:\NC4\MC3\HTTPD\conf\httpd.conf" do
   variables( :server_name => 'MC3AgileDev')
 end
 
-execute "Create Windows service for Apache" do
-  command "cd D:\NC4\HTTPD\bin\"
-  command "httpd.exe -k install -n 'Apache 2.2 HTTP'"
-  command "sc \\server config ServiceName obj= Domain\user password= pass"
+execute 'Create Windows service for Apache' do
+  command 'cd D:\NC4\HTTPD\bin\'
+  command 'httpd.exe -k install -n 'Apache 2.2 HTTP''
+  command 'sc \\server config ServiceName obj= Domain\user password= pass'
 end
