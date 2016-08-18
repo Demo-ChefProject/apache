@@ -20,7 +20,7 @@ end
 
 template 'D:\NC4\MC3\HTTPD\conf\httpd.conf' do
   source 'httpd.erb'
-  variables( :mcapp => 'MC3AgileDev')
+  variables( :server_name => 'MC3AgileDev')
 end
 
 execute 'Create Windows service for Apache' do
