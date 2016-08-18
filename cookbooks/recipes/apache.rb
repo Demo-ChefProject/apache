@@ -1,5 +1,6 @@
 remote_file 'D:\NC4\MC3' do
-  source 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/org/apache/apache-httpd-32/2.2.32/apache-httpd-32-2.2.32.zip'
+  source 'vardeclarations.rb'
+  variables( :nexus => 'http://devmcnexus21.nc4.local:8081/repository/maven-releases/org/apache/apache-httpd-32/2.2.32/apache-httpd-32-2.2.32.zip')
 end
 
 execute 'unzip apache' do
@@ -19,7 +20,7 @@ end
 
 template 'D:\NC4\MC3\HTTPD\conf\httpd.conf' do
   source 'httpd.erb'
-  variables( :mcapp => 'MC3AgileDev')
+  variables( :server_name => 'MC3AgileDev')
 end
 
 execute 'Create Windows service for Apache' do
